@@ -20,12 +20,11 @@ $totalVendas = mysqli_fetch_assoc($query5);
     <div class="card-body">
         <div class="row">
             <div class="col-lg-3 col-6">
-                <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
                         <h3><?php echo $totalPratos['total']; ?></h3>
 
-                        <p>Pratos</p>
+                        <p>Produtos</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
@@ -33,9 +32,7 @@ $totalVendas = mysqli_fetch_assoc($query5);
                     <a href="pratos.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <!-- ./col -->
             <div class="col-lg-3 col-6">
-                <!-- small box -->
                 <div class="small-box bg-success">
                     <div class="inner">
                         <h3><?php echo $totalSalas['total']; ?></h3>
@@ -48,9 +45,7 @@ $totalVendas = mysqli_fetch_assoc($query5);
                     <a href="salas.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <!-- ./col -->
             <div class="col-lg-3 col-6">
-                <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
                         <h3><?php echo $totalUsuarios['total']; ?></h3>
@@ -63,9 +58,7 @@ $totalVendas = mysqli_fetch_assoc($query5);
                     <a href="usuarios.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <!-- ./col -->
             <div class="col-lg-3 col-6">
-                <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
                         <h3><?php echo $totalPedidos['total']; ?></h3>
@@ -78,7 +71,6 @@ $totalVendas = mysqli_fetch_assoc($query5);
                     <a href="lista_vendas.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <!-- ./col -->
         </div>
         <div class="row">
             <div class="col-lg-12">
@@ -95,7 +87,6 @@ $totalVendas = mysqli_fetch_assoc($query5);
                                 <span>Total</span>
                             </p>
                         </div>
-                        <!-- /.d-flex -->
 
                         <div class="position-relative mb-4">
                             <canvas id="sales-chart" height="200"></canvas>

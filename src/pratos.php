@@ -10,7 +10,7 @@ if ($_SESSION['rol'] == 1 || $_SESSION['rol'] == 2) {
         $foto_atual = $_POST['foto_atual'];
         $foto = $_FILES['foto'];
         $data_pedido = date('YmdHis');
-        if (empty($prato) || empty($preco) || $precio < 0) {
+        if (empty($prato) || empty($preco) || $preco < 0) {
             $alert = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
                         Todos os campos são obrigatórios!
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
