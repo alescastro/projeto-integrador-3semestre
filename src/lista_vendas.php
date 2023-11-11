@@ -36,7 +36,7 @@ if ($_SESSION['rol'] == 1 || $_SESSION['rol'] == 2) {
                                 <td><?php echo $row['id']; ?></td>
                                 <td><?php echo $row['salas']; ?></td>
                                 <td><?php echo $row['num_mesa']; ?></td>
-                                <td><?php echo $row['data_pedido']; ?></td>
+                                <td><?php echo $row['data']; ?></td>
                                 <td><?php echo $row['total']; ?></td>
                                 <td><?php echo $row['nome']; ?></td>
                                 <td>

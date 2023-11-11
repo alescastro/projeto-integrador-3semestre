@@ -4,7 +4,7 @@ session_start();
 if (isset($_GET['detalhe'])) {
     $id = $_SESSION['idUser'];
     $dados = array();
-    $detalhe = mysqli_query($conexion, "SELECT d.*, p.nome, p.preco, p.imagem FROM temp_pedidos d INNER JOIN pratos p ON d.id_produto = p.id WHERE d.id_usuario = $id");
+    $detalhe = mysqli_query($conexao, "SELECT d.*, p.nome, p.preco, p.imagem FROM temp_pedidos d INNER JOIN pratos p ON d.id_produto = p.id WHERE d.id_usuario = $id");
     while ($row = mysqli_fetch_assoc($detalhe)) {
         $data['id'] = $row['id'];
         $data['nome'] = $row['nome'];
@@ -104,7 +104,7 @@ if (isset($_POST['regDetalhe'])) {
     $consulta = mysqli_query($conexao, "SELECT * FROM temp_pedidos WHERE id_produto = $id_produto AND id_usuario = $id_user");
     $row = mysqli_fetch_assoc($consulta);
     if (empty($row)) {
-        $produto = mysqli_query($conexao, "SELECT * FROM platos WHERE id = $id_produto");
+        $produto = mysqli_query($conexao, "SELECT * FROM pratos WHERE id = $id_produto");
         $result = mysqli_fetch_assoc($produto);
         $preco = $result['preco'];
         $query = mysqli_query($conexao, "INSERT INTO temp_pedidos (quantidade, preco, id_produto, id_usuario) VALUES (1, $preco, $id_produto, $id_user)");

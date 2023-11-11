@@ -1,5 +1,5 @@
 <?php
-include("../conexion.php");
+include("../conexao.php");
 if ($_POST['action'] == 'sales') {
     $desde = date('Y') . '-01-01 00:00:00';
     $ate = date('Y') . '-12-31 23:59:59';

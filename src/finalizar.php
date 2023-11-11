@@ -24,7 +24,7 @@
                 if (!empty($result)) { ?>
                     <div class="col-md-12 text-center">
                         <div class="col-12">
-                            Data: <?php echo $result['data_pedido']; ?>
+                            Data: <?php echo $result['data']; ?>
                             <hr>
                             Mesa: <?php echo $_GET['mesas']; ?>
                         </div>
@@ -41,7 +41,6 @@
                         $query1 = mysqli_query($conexao, "SELECT * FROM detalhe_pedidos WHERE id_pedido = $id_pedido");
                         while ($data1 = mysqli_fetch_assoc($query1)) { ?>
                             <div class="col-md-4 card card-widget widget-user">
-                                <!-- Add the bg color to the header using any of the bg-* classes -->
                                 <div class="widget-user-header bg-warning">
                                     <h3 class="widget-user-username">Preço</h3>
                                     <h5 class="widget-user-desc"><?php echo $data1['preco']; ?></h5>
@@ -53,7 +52,6 @@
                                     <div class="description-block">
                                         <span><?php echo $data1['nome']; ?></span>
                                     </div>
-                                    <!-- /.row -->
                                 </div>
                             </div>
                         <?php } ?>
@@ -68,7 +66,6 @@
                 <?php } ?>
             </div>
         </div>
-        <!-- /.card -->
     </div>
     <?php include_once "includes/footer.php";
     } else {
