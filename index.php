@@ -15,16 +15,16 @@ if (!empty($_SESSION['active'])) {
         } else {
             require_once "conexao.php";
             $user = mysqli_real_escape_string($conexao, $_POST['email']);
-            $pass = md5(mysqli_real_escape_string($conexao, $_POST['pass']));
-            $query = mysqli_query($conexao, "SELECT * FROM usuarios WHERE email = '$user' AND pass = '$pass'");
+            $pass = (mysqli_real_escape_string($conexao, $_POST['pass']));
+            $query = mysqli_query($conexao, "SELECT * FROM usuarios WHERE email = '$user' AND senha = '$pass'");
             mysqli_close($conexao);
             $resultado = mysqli_num_rows($query);
             if ($resultado > 0) {
-                $dato = mysqli_fetch_array($query);
+                $dado = mysqli_fetch_array($query);
                 $_SESSION['active'] = true;
-                $_SESSION['idUser'] = $dato['id'];
-                $_SESSION['nome'] = $dato['nome'];
-                $_SESSION['rol'] = $dato['rol'];
+                $_SESSION['idUser'] = $dado['id'];
+                $_SESSION['nome'] = $dado['nome'];
+                $_SESSION['rol'] = $dado['rol'];
                 header('Location: src/dashboard.php');
             } else {
                 $alert = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
