@@ -2,7 +2,7 @@
 Projeto Integrador da Faculdade de Ciências da Computacao - Uri Campus de Erechim
 
 ## Ideia de Projeto
-Sistema para controle de mesas e gestão de comandas, sistema simples, desenvolvido em PHP
+Sistema para controle de mesas e gestão de comandas, sistema simples, desenvolvido utilizando Javascript e PHP
 para entrega no 3 semestre da faculdade.
 
 # <h2>💻 Tecnologias: <h2>
